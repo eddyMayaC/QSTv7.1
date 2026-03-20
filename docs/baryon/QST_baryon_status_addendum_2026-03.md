@@ -1,16 +1,54 @@
-# QST 重子包覆因子理論：2026-03 狀態補充（清理版）
+# QST 重子包覆因子理論：2026-03 狀態補充（最終清理版）
 
-## 1. 最新裁決
+## 1. 目前最重要的結論
 
-目前最誠實的理論定位如下。
+重子包覆因子理論目前可以誠實聲稱的，不是 constituent lock-level 的第一原理 closure，而是三體泛函所導出的幾何排序結構。
+
+目前最小 bare 草圖為：
 
 \[
 \boxed{(n_q,n_s,n_c)=(2,1,0)}
 \]
 
-這組數值應被視為 **bare integer anchor**，而不是已封閉的精確觀測 lock level。
+這組數值只應被視為 **bare integer anchor**，而不是已封閉的精確觀測 lock level。
 
-以 \(\Omega_{ccc}\) 作錨點時，當前 charm-sector 的半定量精度約為：
+## 2. 現階段狀態表
+
+| 項目 | 狀態 | 可入文件？ |
+|---|---|---|
+| Branch ordering \(\Gamma_{\rm mix} > \Gamma_{\rm str} > \Gamma_{\rm pure}\) | ✅ 穩定通過 | ✅ |
+| Topology assignment rule | ✅ 清晰且有物理來源 | ✅ |
+| \(n_q/n_s \approx \varphi^2\) | 🟡 數值信號，未證為定理 | 🟡 可寫，但要標明是觀察 |
+| bare \((2,1,0)\) 在 charm sector 的精度 | 🟡 約 3%–8%（部分重子） | ✅ 可誠實標注精度上限 |
+| constituent \(n_f\) 的第一原理來源 | ❌ 未解決 | ❌ |
+| FVF lock spectrum 的可執行 closure | ❌ 目前會落入循環論證 | ❌ |
+| \(\Xi_{cc}\) 達到 5% 以內精度 | ❌ 目前仍約 13% | ❌ |
+
+## 3. 哪些結果已成立
+
+### 3.1 Branch ordering 已成立
+
+目前最穩定、最乾淨的成果是：
+
+\[
+\boxed{\Gamma_{\rm mix} > \Gamma_{\rm str} > \Gamma_{\rm pure}}
+\]
+
+這表示三體幾何排序結構已經建立。換句話講，QST 在 baryon 問題上，已經成功分離出 topology dressing 的主體方向。
+
+### 3.2 Topology assignment rule 可入文件
+
+以下分支指派目前結構清楚：
+
+- mixed：含 light quark 參與，例如 \(\Lambda_c(udc)\)、\(\Xi_{cc}(qcc)\)
+- strange-rich：含 strange/heavy 組合，例如 \(\Omega_c(ssc)\)、\(\Omega_{cc}(scc)\)
+- pure-heavy：純 heavy，例如 \(\Omega_{ccc}(ccc)\)
+
+這一層的幾何分類可以獨立成立，不必等 constituent lock-level fully closed 才能說明。
+
+### 3.3 bare \((2,1,0)\) 是有用的最小草圖
+
+以 \(\Omega_{ccc}\) 作錨點時，目前 charm-sector 的半定量精度大致為：
 
 - \(\Xi_{cc}\)：約 \(-3.2\%\)
 - \(\Omega_{cc}\)：約 \(+3.0\%\)
@@ -18,83 +56,70 @@
 - \(\Omega_c\)：約 \(+6.9\%\)
 - \(\Omega_{ccc}\)：錨點
 
-因此，bare \((2,1,0)\) 目前可被誠實定位為：
+因此：
 
 \[
-\boxed{\text{有理論動機的最小整數候選，可在 charm baryon sector 達到約 }3\%\text{–}8\%\text{ 的半定量精度。}}
+\boxed{\text{bare }(2,1,0)\text{ 目前是有理論動機、且可達約 }3\%\text{–}8\%\text{ 的最小整數候選。}}
 \]
 
-## 2. 新的結構發現
+它不是最終 closure，但亦不是無意義的假設。
 
-最新反推顯示，flavor lock spacing 可能帶有一個明顯的黃金比例結構信號：
+## 4. 哪些結果目前只是觀察，不是定理
+
+### 4.1 \(n_q/n_s \approx \varphi^2\)
+
+最新反推顯示：
 
 \[
-\boxed{\frac{n_q}{n_s}\approx \varphi^2}
+\boxed{\frac{n_q}{n_s} \approx \varphi^2}
 \]
 
 數值上，最佳比值約為 \(2.66\)，而
 
 \[
-\boxed{\varphi^2\approx 2.618}
+\boxed{\varphi^2 \approx 2.618}
 \]
 
-兩者差距約為 1.5%。更重要的是，當強制
+兩者只差約 1.5%。而且當強制該比值時，整體誤差幾乎不變。這是一個值得保留的結構信號。
+
+但目前最誠實的表述必須是：
 
 \[
-\boxed{n_q/n_s=\varphi^2}
+\boxed{\text{這是數值支持的結構觀察，不是已從第一原理完成證明的定理。}}
 \]
 
-後，整體誤差幾乎不變。這表示：
+## 5. 哪些路線已知失敗或暫停
+
+為保持文件乾淨，以下探索性路線不再作為主線總結：
+
+### 5.1 單一 flavor-universal 的 \(n_q^{\rm eff}\) 修正式
+
+原因是：
+
+- \(\Lambda_c\) 需要 \(n_q^{\rm eff}\) 向下拉低；
+- \(\Xi_{cc}\) 反而需要 \(n_q^{\rm eff}\) 向上修正。
+
+因此，單一普適修正式不能同時改好兩者。
+
+### 5.2 二階 \(\varphi\)-backreaction 方案
+
+目前數值顯示，它不足以形成主線 closure，因此暫停。
+
+### 5.3 以 \(\eta_m\sigma_M^2\) 作主 closure 機制
+
+對 \(\Xi_{cc}\) 反推會得到不合法的負值，因此在現階段不能成立。
+
+### 5.4 FVF lock selection functional 的直接執行版
+
+若把
 
 \[
-\boxed{\text{DSI 的 }\varphi^2\text{ 步長，不只可能控制尺度層，也可能控制 flavor 間的 lock spacing。}}
+D_f^{\rm proto}=D_0-q_K\varphi^{-2}
 \]
 
-這一點值得寫入文件，但必須誠實標註為：
+直接作為 proto input，則 spectrum 選擇會自動回到原本的 ordering label，形成循環論證。要打破此循環，需要一個獨立的 \(D_f^{\rm proto}\) 來源；而目前這一步尚未在框架內解決。因此，FVF lock spectrum 的「執行版 closure」暫時失敗。
 
-\[
-\boxed{\text{數值支持的結構觀察，而不是已完成的第一原理定理。}}
-\]
-
-## 3. 當前最難的個案：\(\Xi_{cc}\)
-
-目前整個 baryon programme 最難對付的測試點仍然是：
-
-\[
-\boxed{\Xi_{cc}(qcc)}
-\]
-
-它同時對以下因素高度敏感：
-
-- 一個 light 加兩個 charm 的 constituent 組合
-- mixed branch 的幾何 dressing
-- heavy anchor 的 normalization
-- branch assignment 後的內部幾何差異
-
-因此，\(\Xi_{cc}\) 目前應被視為整個重子框架的關鍵 stress test。
-
-## 4. 哪些方案暫停或失敗
-
-為了保持文件乾淨，以下探索性路線不再作為主線總結：
-
-1. 單一 flavor-universal 的 \(n_q^{\rm eff}\) 修正式。
-
-   其原因是：
-
-   - \(\Lambda_c\) 需要 \(n_q^{\rm eff}\) 向下拉低；
-   - \(\Xi_{cc}\) 反而需要 \(n_q^{\rm eff}\) 向上修正。
-
-   所以同一條普適修正式，無法同時改好兩者。
-
-2. 二階 \(\varphi\)-backreaction 方案。
-
-   目前數值顯示，它不足以構成當前主線 closure，因此暫停。
-
-3. 以 \(\eta_m\sigma_M^2\) 作主要 closure 機制。
-
-   對 \(\Xi_{cc}\) 的反推會導致不合法的負值，因此在現階段不成立。
-
-## 5. 目前最誠實的定位
+## 6. 真正的開口在哪裡
 
 而家最關鍵的判斷是：
 
@@ -106,31 +131,26 @@
 
 - E8 / Golden-K 目前穩定提供的是 **flavor hierarchy ordering**；
 - bare integer levels \((2,1,0)\) 提供的是 **最小 anchor**；
-- 若要進一步超越 3%–8% 的半定量精度，必須由 **FVF lock 動力學** 正式給出 constituent 的 effective locking。
+- 若要進一步超越 3%–8% 的半定量精度，必須由一個非循環的 FVF lock 動力學正式給出 constituent 的 effective locking。
 
-所以，現階段最準確的理論定位是：
-
-\[
-\boxed{q_K(f)\ \text{只穩定提供 flavor ordering，}\ (n_q,n_s,n_c)=(2,1,0)\ \text{是有動機的 bare integer anchor，}\ 但不是最終可觀測的唯一 }n_f.}
-\]
-
-## 6. 通俗解釋
+## 7. 通俗解釋
 
 最白話可以咁理解：
 
 - E8 而家主要做到的，是幫你排好隊，知道 light、strange、charm 大致上誰高誰低；
 - bare \((2,1,0)\) 就像一張最簡單的樓層草圖：light 在二樓、strange 在一樓、charm 在零樓；
 - 這張草圖唔差，因為用 \(\Omega_{ccc}\) 做錨點後，多數 charm baryon 已經進入 3%–8% 區間；
-- 但真正 baryon 裡，三粒 quark 不是靜止站在自己樓層，而是綁在一起、互相拉扯；所以同一粒 light quark，放在 \(\Lambda_c\) 同放在 \(\Xi_{cc}\) 內部，實際表現出的有效樓層可以不同。
+- 但真正 baryon 裡，三粒 quark 不是靜止站在自己樓層，而是綁在一起、互相拉扯；所以同一粒 light quark，放在 \(\Lambda_c\) 同放在 \(\Xi_{cc}\) 內部，實際表現出的有效樓層可以不同；
+- 如果你想真正算這個有效樓層，就要有一個不循環的 FVF lock 譜；而目前這一步仍未打通。
 
 所以，問題已經唔再係「排序錯」，而係：
 
 \[
-\boxed{\text{真實的有效樓層，仍要由 FVF lock 動力學自己算出，唔能只靠 bare integer 表硬定。}}
+\boxed{\text{真實的有效樓層，仍要由非循環的 FVF lock 動力學自己算出，唔能只靠 bare integer 表硬定。}}
 \]
 
-## 7. 一句總結
+## 8. 一句總結
 
 \[
-\boxed{\text{QST baryon programme 目前已完成排序層與最小整數 anchor；}\ \text{下一個真正的理論工作，是從 FVF lock spectrum 推出 constituent effective locking。}}
+\boxed{\text{QST baryon programme 目前已完成排序層與最小整數 anchor；}\ \text{它可以誠實聲稱幾何排序結構，但仍不能誠實聲稱 constituent lock-level 的第一原理 closure。}}
 \]
